@@ -17,11 +17,13 @@ require('./config/gulp-css-extractor.js');
 ```
 - Now, whenever you use 'gulp serve' or 'gulp bundle', a css stylesheet will be extracted.
 - To view your custom stylesheet within the local SPFx workbench, you can load it using the SPCompontentLoader module. Here is an example of loading when developing locally:
+
+Edit your main TypeScript file and import the following:
 ```javascript
 import { Environment, EnvironmentType } from '@microsoft/sp-core-library';
 import { SPComponentLoader } from '@microsoft/sp-loader';
 ```
-And add a constructor function to your default class:
+Then add a constructor function to your default class:
 ```javascript
 constructor(){
     super();
